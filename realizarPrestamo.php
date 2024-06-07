@@ -53,6 +53,7 @@
 
                 $log = $list->buscarElemento('usuarios', 'ID', $_SESSION['id']);
 
+                // Comentar lo de abajo para quitar los errores relacionados con el mail
                 mail($log->correoElectronico, '¡Préstamo realizado!', $asunto, $_SESSION['header']);
             }
         ?>
