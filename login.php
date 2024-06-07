@@ -30,6 +30,7 @@ if (!empty($_POST)) {
 
                     $asunto = "El día de " . date('d/m/Y') . ", su cuenta bajo el nombre de $username inició sesión en nuestro sitio web; si no ha sido usted, le recomendamos contactarnos para cambiar su contraseña." . "\n\n" . "- El equipo de La Biblioteca Virtual";
 
+                    // Comentar lo de abajo para quitar los errores relacionados con el mail
                     mail($log->correoElectronico, 'Alerta de inicio de sesión', $asunto, $_SESSION['header']);
 
                     header('Location: index.php');
@@ -66,6 +67,7 @@ if (!empty($_POST)) {
 
                 $asunto = "¡Bienvenido $nombre!" . "\n" . "Le agradecemos por su preferencia hacia nuestro servicio y esperamos que la pueda pasar bien realizando préstamos y revisando nuestro catálogo." . "\n\n" . "- El equipo de La Biblioteca Virtual";
 
+                // Comentar lo de abajo para quitar los errores relacionados con el mail
                 mail($correo, '¡Bienvenido a nuestra Biblioteca Virtual!', $asunto, $_SESSION['header']);
 
                 header('Location: index.php');
