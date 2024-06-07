@@ -70,6 +70,7 @@
 
                             $log = $list->buscarElemento('usuarios', 'ID', $_SESSION['id']);
 
+                            // Comentar lo de abajo para quitar los errores relacionados con el mail
                             mail($log->correoElectronico, '¡Recordatorio!', $asunto, $_SESSION['header']);
                         }
 
@@ -121,6 +122,7 @@
 
                                                     $log = $prest->buscarElemento('usuarios', 'ID', $_SESSION['id']);
     
+                                                    // Comentar lo de abajo para quitar los errores relacionados con el mail
                                                     mail($log->correoElectronico, '!Préstamo devuelto!', $asunto, $_SESSION['header']);
                                                 }
                                             }
@@ -187,6 +189,7 @@
 
                                                     $log = $prest->buscarElemento('usuarios', 'ID', $_SESSION['id']);
     
+                                                    // Comentar lo de abajo para quitar los errores relacionados con el mail
                                                     mail($log->correoElectronico, '!Préstamo devuelto!', $asunto, $_SESSION['header']);
                                                 }
 
